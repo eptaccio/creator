@@ -21,6 +21,14 @@
     "enzyme-adapter-react-16": "^1.1.0",
     "enzyme-to-json": "^3.2.2",
     "eslint": "^4.12.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
     "react-test-renderer": "^16.2.0",
@@ -34,6 +42,7 @@
     "react-dom": "^16.2.0"
   },
   "scripts": {
+    "lint": "eslint ./src/**/*.js",
     "build": "npm run clean && webpack",
     "clean": "rimraf ./dist",
     "test": "jest",
