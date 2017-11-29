@@ -1,0 +1,10 @@
+{
+  "name": "creator",
+  "version": "0.1.0",
+  "description": "A simple component react boilerplate",
+  "main": "dist/index.js",
+  "repository": "git@github.com:anarklab/creator.git",
+  "author": "Anark Lab.",
+  "license": "MIT",
+  "private": false
+}
