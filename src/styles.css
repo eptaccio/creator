@@ -10,12 +10,12 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .title {
   font-size: 10vmin;
-  color: var(--color-black);
+  color: var(--color-white);
 }
   .title::after {
     content: '';
@@ -25,5 +25,5 @@
     display: block;
 
     border-radius: 4px;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
   }
