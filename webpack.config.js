@@ -7,5 +7,11 @@ module.exports = {
   output: {
     path: __dirname + './dist',
     filename: 'bundle.min.js'
-  }
+  },
+  plugins: [
+    new UglifyJsPlugin({
+      mangle: false,
+      sourceMaps: false
+    })
+  ]
 }
