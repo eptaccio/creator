@@ -13,5 +13,18 @@ module.exports = {
       mangle: false,
       sourceMaps: false
     })
-  ]
+  ],
+  module: {
+    rules: [
+      // JS
+      {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            'es2015', 'react'
+          ]
+        }
+      }
+    ]
+  }
 }
