@@ -1,3 +1,4 @@
+const { resolve } = require('path')
 const webpack = require('webpack')
 const UnglifyJS = webpack.optimize.UglifyJsPlugin
 
@@ -5,11 +6,11 @@ module.exports = {
   context: __dirname,
   entry: './src/index.js',
   output: {
-    path: __dirname + './dist',
+    path: resolve(__dirname, './dist'),
     filename: 'bundle.min.js'
   },
   plugins: [
-    new UglifyJsPlugin({
+    new UnglifyJS({
       mangle: false,
       sourceMaps: false
     })

@@ -30,6 +30,7 @@
     "react-dom": "^16.2.0"
   },
   "scripts": {
+    "build": "npm run clean && webpack",
     "clean": "rimraf ./dist",
     "test": "jest",
     "test:watch": "jest --watch",
