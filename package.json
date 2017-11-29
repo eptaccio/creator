@@ -21,6 +21,7 @@
     "enzyme-to-json": "^3.2.2",
     "jest": "^21.2.1",
     "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.2",
     "webpack": "^3.8.1"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "react-dom": "^16.2.0"
   },
   "scripts": {
+    "clean": "rimraf ./dist",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -36,10 +38,11 @@
     "build-storybook": "build-storybook"
   },
   "jest": {
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
-    "setupFiles": ["./tests/jestsetup.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "setupFiles": [
+      "./tests/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
