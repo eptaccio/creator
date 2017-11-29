@@ -1,5 +1,5 @@
-const { resolve } = require('path')
 const webpack = require('webpack')
+const { resolve } = require('path')
 const UnglifyJS = webpack.optimize.UglifyJsPlugin
 
 module.exports = {
@@ -19,12 +19,28 @@ module.exports = {
     rules: [
       // JS
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
           presets: [
             'es2015', 'react'
           ]
         }
+      },
+
+      // CSS
+      {
+        test: /\.css$/,
+        use: [
+          {loader: 'style-loader'},
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ]
       }
     ]
   }
